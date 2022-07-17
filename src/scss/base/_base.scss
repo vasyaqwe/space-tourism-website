@@ -1,0 +1,94 @@
+:root {
+    // colors //
+    --clr-dark: 230 35% 7%;
+    --clr-light: 231 77% 90%;
+    --clr-white: 0 0% 100%;
+    // colors //
+
+    // font-sizes //
+    --fs-900: clamp(5rem, 8vw + 1rem, 9.375rem);
+    --fs-800: 3.5rem;
+    --fs-700: 1.5rem;
+    --fs-600: 1rem;
+    --fs-500: 1rem;
+    --fs-400: 0.938rem;
+    --fs-300: 1rem;
+    --fs-200: 0.875rem;
+    // font-sizes //
+
+    //letter-spacing//
+    --ls-400: 2.36px;
+    --ls-500: 2.7px;
+    //letter-spacing//
+
+    // font-families //
+    --ff-bellefair: "Bellefair", serif;
+    --ff-barlow-cond: 'Barlow Condensed', sans-serif;
+    --ff-barlow: "Barlow", sans-serif;
+    // font-families //
+
+}
+
+@media (min-width: 35em) {
+    :root {
+        // font-sizes //
+        --fs-800: 5rem;
+        --fs-700: 2.5rem;
+        --fs-600: 1.5rem;
+        --fs-500: 1.25rem;
+        --fs-400: 1rem;
+        --fs-200: 1rem;
+        // font-sizes //
+
+        //letter-spacing//
+        --ls-400: 2.7px;
+        --ls-500: 3.38px;
+        //letter-spacing//
+    }
+}
+
+@media (min-width: 45em) {
+    :root {
+        // font-sizes //
+        --fs-800: 6.25rem;
+        --fs-700: 3.5rem;
+        --fs-600: 2rem;
+        --fs-500: 1.75rem;
+        --fs-400: 1.125rem;
+        // font-sizes //
+
+        //letter-spacing//
+        --ls-500: 4.72px;
+        //letter-spacing//
+    }
+}
+
+body {
+    font-family: var(--ff-barlow);
+    font-size: var(--fs-400);
+    color: hsl(var(--clr-white));
+    background-color: hsl(var(--clr-dark));
+    display: grid;
+    grid-template-rows: min-content 1fr;
+    overflow-x: hidden;
+}
+
+.skip-to-content {
+    position: absolute;
+    transform: scaleY(0);
+    transform-origin: top;
+    z-index: 2000;
+    background-color: hsl(var(--clr-white));
+    color: hsl(var(--clr-dark));
+    padding: 0.5em 1em;
+    margin-inline: auto;
+    transition: transform 0.3s ease-in;
+}
+
+.skip-to-content:focus {
+    transform: scaleY(1);
+}
+
+p {
+    line-height: 2;
+}

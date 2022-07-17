@@ -1,0 +1,27 @@
+@use '../base' as *;
+
+.numbered-indicators {
+    align-items: center;
+    font-size: var(--fs-600);
+
+    &>* {
+        max-width: 80px;
+        border-radius: 100vmax;
+        padding: 0 1em;
+        aspect-ratio: 1;
+        border: 1px solid hsl(var(--clr-white) / .25);
+        background-color: transparent;
+        color: hsl(var(--clr-white));
+        transition: all 0.3s ease;
+
+        &[aria-selected=true] {
+            background-color: hsl(var(--clr-white));
+            color: hsl(var(--clr-dark));
+            border-color: hsl(var(--clr-white) / 1);
+        }
+    }
+}
+
+.numbered-indicators>.btn:hover {
+    border-color: hsl(var(--clr-white) / 1);
+}

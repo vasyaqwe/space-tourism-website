@@ -1,0 +1,27 @@
+@use '../base' as *;
+
+.dot-indicators {
+    justify-content: center;
+
+    &>* {
+        width: 10px;
+
+        @media(min-width: 45em) {
+            width: 15px;
+        }
+
+        aspect-ratio: 1;
+        border-radius: 100vmax;
+        background-color: hsl(var(--clr-white) / .25);
+        transition: all 0.3s ease;
+
+        &[aria-selected=true] {
+            background-color: hsl(var(--clr-white));
+        }
+    }
+}
+
+.dot-indicators>.btn--dot:hover,
+.btn--dot:focus {
+    background-color: hsl(var(--clr-white) / .5);
+}
