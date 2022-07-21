@@ -2,7 +2,7 @@
     display: grid;
     text-align: center;
     place-items: center;
-    padding-inline: 1rem;
+    padding-inline: 2em;
     padding-bottom: 4em;
     row-gap: 2rem;
 
@@ -226,17 +226,17 @@
     }
 
     @media(min-width: 35em) {
-        margin-top: 2rem;
+        margin-top: 3rem;
 
         .numbered-title {
-            padding-left: 2em;
+            padding-left: 1.5em;
         }
     }
 
     @media(min-width: 45em) {
         padding-bottom: 2em;
         grid-template-columns: 1fr 1fr 1fr;
-        padding-left: 2em;
+        padding-left: 3em;
         grid-template-areas: 'title . .'
             'article article img'
             'numbers numbers img';
@@ -252,7 +252,6 @@
 
         &__img {
             justify-self: end;
-            align-self: end;
         }
 
         &__article {
@@ -265,21 +264,20 @@
         }
     }
 
-    @media(min-width: 60em) {
-        column-gap: 6rem;
+    @media(min-width: 70em) {
+        row-gap: 0;
+        column-gap: 2rem;
         padding-inline: 0;
-        grid-template-columns: minmax(5rem, 1fr) minmax(0, 31rem) minmax(0, 40rem);
-        grid-template-areas: '. title .'
-            'numbers article img';
+        grid-template-columns: minmax(5rem, 1fr) 6rem minmax(0, 38rem) minmax(0, 40rem);
+        grid-template-areas: '. title . .'
+            '. numbers  article img';
 
         .numbered-indicators {
             flex-direction: column;
-            justify-self: end;
         }
 
         .numbered-title {
-            margin-left: -9.5rem;
-            grid-column: 2;
+            grid-column: 2/4;
         }
 
         &__article {
